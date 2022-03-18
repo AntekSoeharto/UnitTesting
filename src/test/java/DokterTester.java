@@ -66,6 +66,19 @@ public class DokterTester {
     }
 
     @Test
+    public void testDeleteDokterTrue(){
+        boolean hapus = condok.deleteDokter("258025");
+        Assertions.assertEquals(true, hapus);
+    }
+
+    public void testDeleteDokterFalse(){
+        String nid = "58";
+        nid = null;
+        boolean hapus = condok.deleteDokter(nid);
+        Assertions.assertEquals(false, hapus);
+    }
+
+    @Test
     public void testUpdateDokterTrue(){
         Dokter dokter = new Dokter("5", "Dokter Spesialis Anak", "Dave Nathaniel", "258025", new Date(2020), "A", "Pria", "TKO", "05850585");
         String tl = "2020-02-12";
@@ -83,6 +96,7 @@ public class DokterTester {
         }catch (Exception ex){
             System.out.println("Gagal Update DOkter");
         }
+
     }
 
     @Test
@@ -106,6 +120,7 @@ public class DokterTester {
         }catch (Exception ex){
             System.out.println("Gagal memasukan Add Absen");
         }
+
     }
 
     @Test
@@ -140,6 +155,15 @@ public class DokterTester {
             Assertions.assertEquals(absen.get(i).getStatus(), listAbsensiDokter.get(i).getStatus());
         }
     }
+
+    @Test
+    public void testDeleteDokter(){
+        String nid = "258025";
+        boolean hapus = condok.deleteDokter(nid);
+        Assertions.assertEquals(true, hapus);
+    }
+
+
 
     @AfterAll
     public static void AfterAll(){
