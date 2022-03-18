@@ -61,27 +61,6 @@ public class ControllerObat {
             return (false);
         }        
     }
-    public static ArrayList<Obat> getAllObat(String id_cabang){
-        conn.connect();
-        ArrayList<Obat> obats = new ArrayList<Obat>();
-        String query = "SELECT * FROM Masa_laku_obat WHERE ID_cabang = '" + id_cabang + "' ";
-        try {
-            Statement stmt = conn.con.createStatement();
-            ResultSet rs = stmt.executeQuery(query);
-            while (rs.next()) {
-                Obat obat = new Obat();
-                obat.setIDMasaLakuObat(rs.getString("ID_MLO"));
-                obat.setIDObat(rs.getString("ID_obat"));
-                obat.setStok(Integer.parseInt(rs.getString("Stok")));
-                obat.setTgl_beli(rs.getString("Tgl_beli"));
-                obat.setTgl_kadaluarsa(rs.getString("Tgl_kadaluarsa"));
-                obats.add(obat);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return obats;
-    }
 
     public static Obat getObat(String namaObat) {
         conn.connect();
@@ -131,8 +110,8 @@ public class ControllerObat {
         }
         int id = Integer.parseInt(IDMLO.substring(3));
         return ("MLO00" + (id+1));
-        
     }
+
     public static String getIDObat(String namaObat) {
         conn.connect();
         String query = "SELECT ID_Obat FROM obat WHERE Nama_obat='" + namaObat + "'";

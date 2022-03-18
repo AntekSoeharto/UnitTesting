@@ -63,8 +63,19 @@ public class DokterTester {
         }catch (Exception ex){
             System.out.println("Gagal Add Dokter");
         }
+    }
 
+    @Test
+    public void testDeleteDokterTrue(){
+        boolean hapus = condok.deleteDokter("258025");
+        Assertions.assertEquals(true, hapus);
+    }
 
+    public void testDeleteDokterFalse(){
+        String nid = "58";
+        nid = null;
+        boolean hapus = condok.deleteDokter(nid);
+        Assertions.assertEquals(false, hapus);
     }
 
     @Test
