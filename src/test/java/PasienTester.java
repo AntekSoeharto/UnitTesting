@@ -1,25 +1,25 @@
-//import Controller.ControllerDokter;
-//import Controller.ControllerPasien;
-//import Model.Pasien;
-//import Model.Singleton;
-//import Model.Staff;
-//
-//import org.junit.jupiter.api.AfterAll;
-//import org.junit.jupiter.api.Assertions;
-//import org.junit.jupiter.api.BeforeAll;
-//import org.junit.jupiter.api.Test;
-//
-//import java.util.ArrayList;
-//import java.util.Date;
-//
-//public class PasienTester {
-//    public static ControllerPasien condok = new ControllerPasien();
-//
-//    @BeforeAll
-//    public static void login(){
-//        Staff staff = new Staff("intan", "intan", "01");
-//        Singleton.getInstance().setStaff(staff);
-//    }
+import Controller.ControllerDokter;
+import Controller.ControllerPasien;
+import Model.Pasien;
+import Model.Singleton;
+import Model.Staff;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.Date;
+
+public class PasienTester {
+    public static ControllerPasien condok = new ControllerPasien();
+
+    @BeforeAll
+    public static void login(){
+        Staff staff = new Staff("intan", "intan", "01");
+        Singleton.getInstance().setStaff(staff);
+    }
 //
 //    @Test
 //    public void testGetAllPasien(){
@@ -72,13 +72,13 @@
 ////        Assertions.assertEquals(true, update);
 //    }
 //
-//
-//    @AfterAll
-//    public static void AfterAll(){
-//        System.out.println("Sudah Selesai untuk testing Pasien");
-//    }
-//
-//
-//
-//
-//}
+
+    @AfterAll
+    public static void AfterAll(){
+        System.out.println("Sudah Selesai untuk testing Pasien");
+    }
+
+
+
+
+}
