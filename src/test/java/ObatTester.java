@@ -90,6 +90,6 @@ public class ObatTester {
 
     @AfterAll
     public static void AfterAll(){
-        System.out.println("Sudah Selesai untuk testing Obat");
+        System.out.println("Sudah Selesai untuk testing Obat!!");
     }
 }
