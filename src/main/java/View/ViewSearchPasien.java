@@ -148,6 +148,7 @@ public class ViewSearchPasien implements ActionListener{
                 break;
             case "CARI PASIEN":
                 Pasien p = ControllerPasien.getPasien(NIKInputTextField.getText());
+                System.out.println(NIKInputTextField.getText());
                 if(p != null){
                     NIKInputLabel.setVisible(false);
                     NIKInputTextField.setVisible(false); 
