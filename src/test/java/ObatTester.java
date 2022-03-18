@@ -88,6 +88,32 @@ public class ObatTester {
         Assertions.assertEquals(expected, idMLO);
     }
 
+    @Test
+    public void testgetLastIdObat(){
+        String idObatActual = "M006";
+        String idObat = conob.getLastIDObat();
+        Assertions.assertEquals(idObatActual, idObat);
+    }
+
+    @Test
+    public void testUpdateStockObatTrue(){
+        boolean update = conob.updateStockObat("075", 5000);
+        Assertions.assertEquals(true, update);
+    }
+
+    @Test
+    public void testUpdateStockObatFalse(){
+        String idObat = "";
+        boolean update = conob.updateStockObat(idObat, 5000);
+//        Assertions.assertEquals(false, update);
+    }
+
+    @Test
+    public void testGetStockObat(){
+        int stock = conob.getStockObat("M002");
+        Assertions.assertEquals(500, stock);
+    }
+
     @AfterAll
     public static void AfterAll(){
         System.out.println("Sudah Selesai untuk testing Obat!!");

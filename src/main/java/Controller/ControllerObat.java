@@ -112,22 +112,6 @@ public class ControllerObat {
         return ("MLO00" + (id+1));
     }
 
-    public static String getIDObat(String namaObat) {
-        conn.connect();
-        String query = "SELECT ID_Obat FROM obat WHERE Nama_obat='" + namaObat + "'";
-        String IDObat = "";
-        try {
-            Statement stmt = conn.con.createStatement();
-            ResultSet rs = stmt.executeQuery(query);
-            while (rs.next()) {
-                IDObat = rs.getString("ID_Obat");
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return (IDObat);
-        
-    }
     public static String getLastIDObat() {
         conn.connect();
         String query = "SELECT ID_Obat FROM `obat` ORDER BY ID_Obat DESC LIMIT 1";
@@ -158,6 +142,7 @@ public class ControllerObat {
             return (false);
         }
     }
+
     public static int getStockObat(String IDObat) {
         conn.connect();
         String query = "SELECT stok FROM Masa_berlaku_obat WHERE ID_Obat = '"+ IDObat +"'";
@@ -172,7 +157,6 @@ public class ControllerObat {
             e.printStackTrace();
         }
         return (stockObat);
-        
     }
 
 }

@@ -156,14 +156,6 @@ public class DokterTester {
         }
     }
 
-    @Test
-    public void testDeleteDokter(){
-        String nid = "258025";
-        boolean hapus = condok.deleteDokter(nid);
-        Assertions.assertEquals(true, hapus);
-        System.out.println("Hapus");
-    }
-
 
 
     @AfterAll
