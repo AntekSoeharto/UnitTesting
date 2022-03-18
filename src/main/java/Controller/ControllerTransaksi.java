@@ -131,6 +131,7 @@ public class ControllerTransaksi {
         }
         return transaksi;
     }
+
     public static boolean insterTransaksibyJanjiTemu(Transaksi transaksi){
         conn.connect();
         String query = "INSERT INTO transaksi VALUES(?,?,?,?,?,?,?,?,?,?)";
