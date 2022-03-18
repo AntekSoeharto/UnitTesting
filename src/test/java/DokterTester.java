@@ -63,8 +63,6 @@ public class DokterTester {
         }catch (Exception ex){
             System.out.println("Gagal Add Dokter");
         }
-
-
     }
 
     @Test
@@ -85,7 +83,6 @@ public class DokterTester {
         }catch (Exception ex){
             System.out.println("Gagal Update DOkter");
         }
-
     }
 
     @Test
@@ -109,7 +106,6 @@ public class DokterTester {
         }catch (Exception ex){
             System.out.println("Gagal memasukan Add Absen");
         }
-
     }
 
     @Test

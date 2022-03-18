@@ -39,7 +39,6 @@ public class ControllerPasien {
                 pasien.setGender(rs.getString("Gender"));
                 pasien.setAlergi(rs.getString("Alergi"));
                 pasien.setPenyakitMenurun(rs.getString("Penyakit_Menurun"));
-                pasien.setBPJS((GolonganPasien) rs.getObject("Golongan"));
                 pasien.setAlamat(rs.getString("Alamat"));
                 pasien.setTelepon(rs.getString("No_telepon"));
                 pasiens.add(pasien);
