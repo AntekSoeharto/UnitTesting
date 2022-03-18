@@ -97,6 +97,19 @@ public class PasienTester {
 //        Assertions.assertEquals(true, update);
     }
 
+    @Test
+    public void testDeletePasienTrue(){
+        boolean hapus = conpas.deletePasien("69");
+        Assertions.assertEquals(true, hapus);
+    }
+
+    public void testDeletePasienFalse(){
+        String nik = "69";
+         nik = null;
+        boolean hapus = conpas.deletePasien(nik);
+        Assertions.assertEquals(false, hapus);
+    }
+
     @AfterAll
     public static void AfterAll(){
         System.out.println("Sudah Selesai untuk testing Pasien");
