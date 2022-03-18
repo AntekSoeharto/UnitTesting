@@ -161,7 +161,4 @@ public class DokterTester {
         System.out.println("Sudah Selesai untuk testing Dokter");
     }
 
-
-
-
 }
