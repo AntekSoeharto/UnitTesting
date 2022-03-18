@@ -25,7 +25,7 @@ public class DBHandler {
     private String username = "root";
     private String password = "";
 
-    private Connection logOn() {
+    public Connection logOn() {
         try {
             //Load JDBC Driver
             Class.forName(driver).newInstance();
