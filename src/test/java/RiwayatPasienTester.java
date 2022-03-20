@@ -50,16 +50,16 @@ public class RiwayatPasienTester {
 
     @Test
     public void testAddRiwayatPasienTrue() {
-        RiwayatPasien riwayatPasien = new RiwayatPasien("diputusin", "sakit hati", new Date(2020));
-        boolean masuk = conriwpas.insertNewRiwayatPasien(riwayatPasien, "10");
+        RiwayatPasien riwayatPasien = new RiwayatPasien("a", "c", new Date(2021));
+        boolean masuk = conriwpas.insertNewRiwayatPasien(riwayatPasien, "5");
         Assertions.assertEquals(true, masuk);
     }
 
     @Test
     public void testAddRiwayatPasienFalse(){
-        RiwayatPasien riwayatPasien = new RiwayatPasien("diputusin", "sakit hati", new Date(2020));
+        RiwayatPasien riwayatPasien = new RiwayatPasien("a", "c", new Date(2021));
         riwayatPasien.setKeluhan(null);
-        boolean masuk = conriwpas.insertNewRiwayatPasien(riwayatPasien, "2");
+        boolean masuk = conriwpas.insertNewRiwayatPasien(riwayatPasien, "5");
         Assertions.assertEquals(false, masuk);
     }
 
