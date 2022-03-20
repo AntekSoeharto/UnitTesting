@@ -68,10 +68,8 @@ public class PasienTester {
     @Test
     public void testAddPasienFalse(){
         Pasien pasien = new Pasien(GolonganPasien.NON_BPJS, "makanan","diabetes", "Andreas Jumaga", "69", new Date(1945), "Komplek Bumi Harapan cc5 no 3a", "08696969696", "+AB", "Pria");
-//        dokter.setNID(null);
-//        boolean masuk = condok.addDokter(dokter);
-        boolean sukses = true;
-//        Assertions.assertEquals(sukses, masuk);
+        boolean masuk = conpas.insertNewPasien(pasien);
+        Assertions.assertEquals(false, masuk);
 
     }
 
@@ -93,8 +91,8 @@ public class PasienTester {
         String ala = "Taman Kopo";
         String tlp = "0865968405";
         String nik = "100";
-//        boolean update = condok.updateDokter(dokter, tl);
-//        Assertions.assertEquals(true, update);
+        boolean update = conpas.updatePasien(gol, ala, tlp, nik);
+        Assertions.assertEquals(false, update);
     }
 
     @Test

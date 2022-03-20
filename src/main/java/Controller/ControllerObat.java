@@ -39,7 +39,6 @@ public class ControllerObat {
             stmt.executeUpdate();
             return (true);
         } catch (SQLException e) {
-            e.printStackTrace();
             return (false);
         }        
     }
@@ -57,7 +56,6 @@ public class ControllerObat {
             stmt.executeUpdate();
             return (true);
         } catch (SQLException e) {
-            e.printStackTrace();
             return (false);
         }        
     }
@@ -91,7 +89,6 @@ public class ControllerObat {
             stmt.executeUpdate();
             return (true);
         } catch (SQLException e) {
-            e.printStackTrace();
             return (false);
         } 
     }
@@ -138,7 +135,6 @@ public class ControllerObat {
             stmt.executeUpdate(query);
             return (true);
         } catch (SQLException e) {
-            e.printStackTrace();
             return (false);
         }
     }
