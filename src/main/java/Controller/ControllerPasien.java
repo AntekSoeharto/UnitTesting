@@ -100,7 +100,6 @@ public class ControllerPasien {
             stmt.executeUpdate();
             return (true);
         } catch (SQLException e) {
-            e.printStackTrace();
             return (false);
         }
     }
@@ -117,7 +116,6 @@ public class ControllerPasien {
             stmt.executeUpdate(query);
             return (true);
         } catch (SQLException e) {
-            e.printStackTrace();
             return (false);
         }
     }
@@ -132,7 +130,6 @@ public class ControllerPasien {
             stmt.executeUpdate(query);
             return (true);
         } catch (SQLException e) {
-            e.printStackTrace();
             return (false);
         }
     }

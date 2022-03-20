@@ -131,6 +131,7 @@ public class ControllerTransaksi {
         }
         return transaksi;
     }
+
     public static boolean insterTransaksibyJanjiTemu(Transaksi transaksi){
         conn.connect();
         String query = "INSERT INTO transaksi VALUES(?,?,?,?,?,?,?,?,?,?)";
@@ -156,7 +157,6 @@ public class ControllerTransaksi {
             stmt.executeUpdate();
             return (true);
         } catch (SQLException e) {
-            e.printStackTrace();
             return (false);
         }
     }
@@ -173,7 +173,6 @@ public class ControllerTransaksi {
             stmt.executeUpdate(query);
             return (true);
         } catch (SQLException e) {
-            e.printStackTrace();
             return (false);
         }
     }
@@ -187,7 +186,6 @@ public class ControllerTransaksi {
             stmt.executeUpdate(query);
             return (true);
         } catch (SQLException e) {
-            e.printStackTrace();
             return (false);
         }
     }

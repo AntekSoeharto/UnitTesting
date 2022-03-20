@@ -60,6 +60,9 @@ public class RiwayatPasienTester {
     public void testAddRiwayatPasienFalse(){
         RiwayatPasien riwayatPasien = new RiwayatPasien("sakit gigi", "gigi berlubang", new Date(2020));
         boolean sukses = true;
+        riwayatPasien = null;
+        boolean masuk = conriwpas.insertNewRiwayatPasien(riwayatPasien, "2");
+        Assertions.assertEquals(sukses, masuk);
     }
 
     @AfterAll
